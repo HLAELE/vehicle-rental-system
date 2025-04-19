@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" spacing="10" style="-fx-background-color: Ivory;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.AvailableVehiclesController">
+
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="20" />
+    </padding>
+
+    <Label style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Available Vehicles Report" />
+
+    <TableView fx:id="availableVehiclesTable" prefHeight="300" prefWidth="600">
+        <columns>
+            <TableColumn fx:id="idColumn" prefWidth="100" text="Vehicle ID" />
+            <TableColumn fx:id="brandModelColumn" prefWidth="150" text="Brand &amp; Model" />
+            <TableColumn fx:id="categoryColumn" prefWidth="100" text="Category" />
+            <TableColumn fx:id="priceColumn" prefWidth="120" text="Rental Price (LSL)" />
+            <TableColumn fx:id="availabilityColumn" prefWidth="100" text="Availability" />
+        </columns>
+    </TableView>
+
+    <Button onAction="#goBack" text="Back to Menu" />
+</VBox>

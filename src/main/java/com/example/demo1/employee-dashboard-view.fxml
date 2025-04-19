@@ -1,0 +1,7 @@
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.demo1.EmployeeDashboardController" alignment="CENTER" spacing="10">
+    <Label text="Welcome to the Employee Dashboard!" style="-fx-font-size: 20;" />
+    <Button text="Manage Bookings" onAction="#onManageBookingsClick"/>
+    <Button text="Payments" onAction="#onManagePaymentsClick"/>
+    <Button text="Available Vehicles" onAction="#onAvailableVehiclesReportClick"/>
+    <Button text="Logout" onAction="#onLogoutClick"/>
+</VBox>

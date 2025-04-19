@@ -1,0 +1,7 @@
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.demo1.AdminDashboardController" alignment="CENTER" spacing="10">
+    <Label text="Welcome to the Admin Dashboard!" style="-fx-font-size: 20;" />
+    <Button text="Manage Customers" onAction="#onManageCustomersClick"/>
+    <Button text="Manage Vehicles" onAction="#onManageVehiclesClick"/>
+    <Button text="Reports" onAction="#onManageReportsClick"/>
+    <Button text="Logout" onAction="#onLogoutClick"/>
+</VBox>

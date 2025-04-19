@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" spacing="10" xmlns:fx="http://javafx.com/fxml/1"
+      xmlns="http://javafx.com/javafx/20.0.2"
+      fx:controller="com.example.demo1.BookingController">
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+
+    <Label text="Booking Management" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+    <HBox spacing="10">
+        <TextField fx:id="bookingIdField" promptText="Booking ID" editable="false"/>
+        <TextField fx:id="customerNameField" promptText="Customer Name"/>
+    </HBox>
+
+    <HBox spacing="10">
+        <ComboBox fx:id="vehicleBox" promptText="Select Vehicle"/>
+        <DatePicker fx:id="startDatePicker" promptText="Start Date"/>
+        <DatePicker fx:id="endDatePicker" promptText="End Date"/>
+    </HBox>
+
+    <HBox spacing="10">
+        <Button onAction="#onAddBookingClick" text="Add Booking"/>
+        <Button onAction="#goBack" text="Back to Menu"/>
+    </HBox>
+
+    <TableView fx:id="bookingTable" prefHeight="250" style="-fx-background-color: Ivory;">
+        <columns>
+            <TableColumn fx:id="idColumn" text="Booking ID"/>
+            <TableColumn fx:id="customerColumn" text="Customer"/>
+            <TableColumn fx:id="vehicleColumn" text="Vehicle ID"/>
+            <TableColumn fx:id="startColumn" text="Start Date"/>
+            <TableColumn fx:id="endColumn" text="End Date"/>
+        </columns>
+    </TableView>
+</VBox>

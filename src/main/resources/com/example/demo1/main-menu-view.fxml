@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" prefHeight="455.0" prefWidth="321.0" spacing="15" style="-fx-background-color: Ivory;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.MainMenuController">
+    <Text style="-fx-font-size: 24; -fx-font-weight: bold;" text="HLAELE RENTAL" />
+
+    <Button onAction="#handleVehicleManagement" prefHeight="38.0" prefWidth="201.0" text="Vehicle Management" />
+    <Button onAction="#handleCustomerManagement" prefHeight="38.0" prefWidth="202.0" text="Customer Management" />
+    <Button onAction="#handleBookingManagement" prefHeight="38.0" prefWidth="201.0" text="Booking Management" />
+    <Button onAction="#handlePayments" prefHeight="38.0" prefWidth="199.0" text="Manage Payments" />
+    <Button onAction="#handleReports" prefHeight="38.0" prefWidth="197.0" text="Manage Reports" />
+    <Button onAction="#handleAvailableReports" text="Available Vehicle Reports" />
+
+</VBox>

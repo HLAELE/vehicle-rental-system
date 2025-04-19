@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" spacing="15" style="-fx-background-color: Ivory;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.PaymentController">
+
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="20" />
+    </padding>
+
+    <Label style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Payment and Billing" />
+
+    <GridPane hgap="10" vgap="10">
+        <Label text="Booking ID:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="bookingIdField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+        <Label text="Rental Duration (Days):" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <TextField fx:id="rentalDaysField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+        <Label text="Vehicle Rate (per day):" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <TextField fx:id="vehicleRateField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+        <CheckBox fx:id="lateFeeCheckBox" text="Include Late Fee (50 LSL)" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <CheckBox fx:id="additionalServiceCheckBox" text="Add Service Fee (100 LSL)" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      <columnConstraints>
+         <ColumnConstraints />
+         <ColumnConstraints />
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+      </rowConstraints>
+    </GridPane>
+
+    <Label style="-fx-font-size: 14px;" text="Payment Method:" />
+    <HBox spacing="10">
+        <RadioButton fx:id="cashRadio" text="Cash" />
+        <RadioButton fx:id="cardRadio" text="Credit Card" />
+        <RadioButton fx:id="onlineRadio" text="Online" />
+        <RadioButton fx:id="bankRadio" text="Bank" />
+    </HBox>
+
+    <!-- Bank Account and PIN fields, initially hidden -->
+    <VBox fx:id="bankFields" spacing="10" visible="false">
+        <Label text="Enter Bank Account Number:" />
+        <TextField fx:id="accountNumberField" promptText="Account Number" />
+        <Label text="Enter PIN:" />
+        <PasswordField fx:id="pinField" promptText="PIN" />
+    </VBox>
+
+    <Button onAction="#onGenerateInvoice" text="Generate Invoice" />
+    <TextArea fx:id="invoiceArea" editable="false" prefRowCount="10" wrapText="true" />
+    <Button onAction="#onPrintInvoice" text="Print Invoice" />
+    <Button onAction="#goBack" text="Back to Menu" />
+
+</VBox>
